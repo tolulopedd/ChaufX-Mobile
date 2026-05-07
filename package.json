@@ -1,0 +1,21 @@
+{
+  "name": "chaufx-mobile",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/customer-mobile",
+    "apps/driver-mobile",
+    "packages/config",
+    "packages/types",
+    "packages/ui"
+  ],
+  "scripts": {
+    "dev:customer": "npm run dev -w @chaufx/customer-mobile -- --port 8081",
+    "dev:driver": "npm run dev -w @chaufx/driver-mobile -- --port 8082",
+    "ios:customer": "npm run ios -w @chaufx/customer-mobile",
+    "ios:driver": "npm run ios -w @chaufx/driver-mobile",
+    "android:customer": "npm run android -w @chaufx/customer-mobile",
+    "android:driver": "npm run android -w @chaufx/driver-mobile",
+    "lint": "npm run lint --workspaces --if-present"
+  }
+}
